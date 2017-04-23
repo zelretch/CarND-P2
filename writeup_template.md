@@ -1,9 +1,4 @@
 #**Traffic Sign Recognition** 
-
-##Writeup Template
-
-###You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
-
 ---
 
 **Build a Traffic Sign Recognition Project**
@@ -19,14 +14,14 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/visualization.jpg "Visualization"
-[image2]: ./examples/grayscale.jpg "Grayscaling"
-[image3]: ./examples/random_noise.jpg "Random Noise"
-[image4]: ./examples/placeholder.png "Traffic Sign 1"
-[image5]: ./examples/placeholder.png "Traffic Sign 2"
-[image6]: ./examples/placeholder.png "Traffic Sign 3"
-[image7]: ./examples/placeholder.png "Traffic Sign 4"
-[image8]: ./examples/placeholder.png "Traffic Sign 5"
+[image1]: ./writeup_images/bar_chart.png "Visualization"
+[image2]: ./writeup_images/before_normalizing.png "before normalizing"
+[image3]: ./writeup_images/normalized_image.png "after normalizing"
+[image4]: ./new_images/1.jpg "Traffic Sign 1"
+[image5]: ./new_images/2.jpg "Traffic Sign 2"
+[image6]: ./new_images/3.jpg "Traffic Sign 3"
+[image7]: ./new_images/4.jpg "Traffic Sign 4"
+[image8]: ./new_images/5.jpg "Traffic Sign 5"
 
 ## Rubric Points
 ###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -53,7 +48,7 @@ signs data set:
 
 ####2. Include an exploratory visualization of the dataset.
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
+Here is an exploratory visualization of the data set. It is a bar chart showing how the data is distributed across different labels
 
 ![alt text][image1]
 
@@ -61,27 +56,19 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 
 ####1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
-As a first step, I decided to convert the images to grayscale because ...
+As a first step, I decided normalize the date because the brightness shouldn't affect the classification of traffic signs 
 
-Here is an example of a traffic sign image before and after grayscaling.
+Here are examples of traffic signs before and after normalization
 
 ![alt text][image2]
-
-As a last step, I normalized the image data because ...
-
-I decided to generate additional data because ... 
-
-To add more data to the the data set, I used the following techniques because ... 
-
-Here is an example of an original image and an augmented image:
-
 ![alt text][image3]
 
-The difference between the original data set and the augmented data set is the following ... 
-
+I didn't do grayscale because color is obviously important for recognizing traffic signs
+Improvement could be made if I generate fake data for the label with less training examples, but I am too lazy for it..
 
 ####2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
+My model is basically the solution for LeNet with demension doubled
 My final model consisted of the following layers:
 
 | Layer         		|     Description	        					| 
